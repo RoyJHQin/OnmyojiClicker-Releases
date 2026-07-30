@@ -1,7 +1,5 @@
 # RandomClicker
 
-![RandomClicker icon](assets/AppIcon.png)
-
 一款轻量的原生 macOS 随机点击工具，可在指定范围内随机移动并点击鼠标。
 
 ![RandomClicker 界面](assets/RandomClicker-Interface.png)
