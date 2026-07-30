@@ -4,6 +4,8 @@
 
 一款轻量的原生 macOS 随机点击工具，可在指定范围内随机移动并点击鼠标。
 
+![RandomClicker 界面](assets/RandomClicker-Interface.png)
+
 ## 功能
 
 - 分别设置主要点击区域与备用区域
