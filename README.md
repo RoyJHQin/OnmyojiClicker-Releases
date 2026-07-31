@@ -5,7 +5,7 @@
 > [!CAUTION]
 > 本项目不是网易或《阴阳师》的官方工具，与网易及游戏运营方没有隶属、合作或授权关系。自动化操作可能违反游戏用户协议或运营规则，并可能造成误点击、资源损失、账号限制或封禁。使用者必须自行确认规则、测试配置并承担全部风险。请勿在无人看管、重要账号或无法承受损失的环境中运行。
 
-![3.0 模式选择界面](docs/images/mode-selector.jpeg)
+![3.0 模式选择界面](docs/images/mode-selector.png)
 
 ## 3.0 有什么变化
 
@@ -26,7 +26,7 @@
 
 ### 1. 区域随机点击
 
-![区域随机点击](docs/images/mode-region-random.jpeg)
+![区域随机点击](docs/images/mode-region-random.png)
 
 适合游戏画面固定、目标按钮不会移动的场景。程序不会判断当前页面是什么，只会在安全边界内随机取点。
 
@@ -39,7 +39,7 @@
 
 ### 2. 画面识别回合
 
-![画面识别回合](docs/images/mode-image-round.jpeg)
+![画面识别回合](docs/images/mode-image-round.png)
 
 适合御魂、爬塔等固定循环。每套方案独立保存开始图、结算图、坐标与时间：
 
@@ -52,7 +52,7 @@
 
 ### 3. 动态探索副本
 
-![动态探索副本](docs/images/mode-dynamic-exploration.jpeg)
+![动态探索副本](docs/images/mode-dynamic-exploration.png)
 
 动态探索会按流程处理以下八项：章节选择页、探索入口、探索地图页、战斗页、宝箱奖励页、普通战斗目标、首领战斗目标、战斗结算页。
 
