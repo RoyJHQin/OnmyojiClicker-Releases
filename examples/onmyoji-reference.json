@@ -1,0 +1,244 @@
+{
+  "format": "GameClickAssistant 3.0 reference-only",
+  "importable": false,
+  "notice": "Coordinates and image regions are device-specific. Capture your own reference images before running.",
+  "targetApplication": {
+    "name": "阴阳师",
+    "bundleIdentifier": "com.netease.onmyoji"
+  },
+  "shared": {
+    "gameWindowRegion": {
+      "centerX": 784.5,
+      "centerY": 459,
+      "radiusX": 563.5,
+      "radiusY": 371
+    },
+    "gameSafeRegion": {
+      "centerX": 784.5,
+      "centerY": 477,
+      "radiusX": 543.5,
+      "radiusY": 331
+    },
+    "startDelaySeconds": 3
+  },
+  "modes": {
+    "regionRandom": {
+      "clickRegion": {
+        "centerX": 1238,
+        "centerY": 746,
+        "radiusX": 26,
+        "radiusY": 20
+      },
+      "minimumDelaySeconds": 0.65,
+      "maximumDelaySeconds": 3,
+      "runLimit": {
+        "kind": "duration",
+        "minutes": 30,
+        "maximumClickCount": 100
+      },
+      "automaticRest": {
+        "minimumWorkDurationMinutes": 4,
+        "maximumWorkDurationMinutes": 6,
+        "minimumRestDurationSeconds": 9,
+        "maximumRestDurationSeconds": 33.1
+      },
+      "outOfRangeExample": {
+        "enabled": true,
+        "warning": "Historical example only. Disable until verified on your device.",
+        "probabilityPercent": 18,
+        "region": {
+          "centerX": 793,
+          "centerY": 468,
+          "radiusX": 66,
+          "radiusY": 51
+        }
+      }
+    },
+    "imageRound": {
+      "profileName": "御魂示例",
+      "workflowType": "fixedRound",
+      "templateFileNames": [],
+      "challenge": {
+        "detectionRegion": {
+          "centerX": 1238,
+          "centerY": 746,
+          "radiusX": 55,
+          "radiusY": 44
+        },
+        "clickRegion": {
+          "centerX": 1238,
+          "centerY": 746,
+          "radiusX": 26,
+          "radiusY": 20
+        },
+        "minimumSimilarity": 0.88,
+        "requiredConsecutiveMatches": 2
+      },
+      "settlement": {
+        "detectionRegion": {
+          "centerX": 774,
+          "centerY": 635,
+          "radiusX": 55,
+          "radiusY": 44
+        },
+        "clickRegion": {
+          "centerX": 784,
+          "centerY": 526,
+          "radiusX": 26,
+          "radiusY": 20
+        },
+        "minimumSimilarity": 0.5,
+        "requiredConsecutiveMatches": 2
+      },
+      "timing": {
+        "battleWaitSeconds": 13,
+        "settlementTimeoutSeconds": 60,
+        "afterSettlementDelaySeconds": 1,
+        "detectionIntervalSeconds": 0.5,
+        "minimumResponseDelaySeconds": 0.2,
+        "maximumResponseDelaySeconds": 0.65
+      },
+      "runLimit": {
+        "kind": "duration",
+        "minutes": 30,
+        "maximumCompletedCount": 20
+      }
+    },
+    "dynamicExploration": {
+      "profileName": "探索示例",
+      "workflowType": "exploration",
+      "templateFileNames": [],
+      "chapterSelection": {
+        "detectionRegion": {
+          "centerX": 289,
+          "centerY": 687,
+          "radiusX": 100,
+          "radiusY": 50
+        },
+        "clickRegion": {
+          "centerX": 1247,
+          "centerY": 556,
+          "radiusX": 115,
+          "radiusY": 28
+        },
+        "minimumSimilarity": 0.5,
+        "requiredConsecutiveMatches": 2
+      },
+      "entry": {
+        "detectionRegion": {
+          "centerX": 1229,
+          "centerY": 700,
+          "radiusX": 70,
+          "radiusY": 55
+        },
+        "clickRegion": {
+          "centerX": 1229,
+          "centerY": 700,
+          "radiusX": 26,
+          "radiusY": 20
+        },
+        "minimumSimilarity": 0.5,
+        "requiredConsecutiveMatches": 2
+      },
+      "mapState": {
+        "detectionRegion": {
+          "centerX": 336,
+          "centerY": 783,
+          "radiusX": 100,
+          "radiusY": 55
+        },
+        "minimumSimilarity": 0.5,
+        "requiredConsecutiveMatches": 1
+      },
+      "battleState": {
+        "detectionRegion": {
+          "centerX": 318,
+          "centerY": 775,
+          "radiusX": 70,
+          "radiusY": 55
+        },
+        "minimumSimilarity": 0.88,
+        "requiredConsecutiveMatches": 2
+      },
+      "chestReward": {
+        "detectionRegion": {
+          "centerX": 786,
+          "centerY": 372,
+          "radiusX": 150,
+          "radiusY": 65
+        },
+        "clickRegion": {
+          "centerX": 1230,
+          "centerY": 614,
+          "radiusX": 120,
+          "radiusY": 55
+        },
+        "minimumSimilarity": 0.5,
+        "requiredConsecutiveMatches": 2
+      },
+      "settlement": {
+        "detectionRegion": {
+          "centerX": 771,
+          "centerY": 633,
+          "radiusX": 55,
+          "radiusY": 44
+        },
+        "clickRegion": {
+          "centerX": 1123,
+          "centerY": 584,
+          "radiusX": 99,
+          "radiusY": 66
+        },
+        "minimumSimilarity": 0.88,
+        "requiredConsecutiveMatches": 2
+      },
+      "mapSearchRegion": {
+        "centerX": 784.5,
+        "centerY": 459,
+        "radiusX": 563.5,
+        "radiusY": 185.5,
+        "followsWindow": true
+      },
+      "circleDiameter": 147,
+      "normalCombat": {
+        "minimumSimilarity": 0.85,
+        "requiredConsecutiveMatches": 1,
+        "clickJitterRadius": 7,
+        "templateCaptureRegion": {
+          "centerX": 924,
+          "centerY": 414,
+          "radiusX": 40,
+          "radiusY": 40
+        }
+      },
+      "bossCombat": {
+        "minimumSimilarity": 0.8,
+        "requiredConsecutiveMatches": 2,
+        "clickJitterRadius": 7,
+        "templateCaptureRegion": {
+          "centerX": 908,
+          "centerY": 394,
+          "radiusX": 40,
+          "radiusY": 40
+        }
+      },
+      "timingAndMovement": {
+        "normalBattleWaitSeconds": 5,
+        "bossBattleWaitSeconds": 0,
+        "entryLoadDelaySeconds": 2,
+        "mapNoTargetBeforeMoveSeconds": 1,
+        "movementStartRegion": {
+          "centerX": 1230,
+          "centerY": 450,
+          "radiusX": 50,
+          "radiusY": 50
+        },
+        "minimumDragDistance": 160,
+        "maximumDragDistance": 260,
+        "minimumDragDurationSeconds": 0.45,
+        "maximumDragDurationSeconds": 0.65,
+        "movementSettleSeconds": 1
+      }
+    }
+  }
+}
