@@ -1,4 +1,4 @@
-# 游戏视觉助手 0.1.0 Beta
+# 游戏视觉助手 0.1.1 Beta
 
 这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。
 
@@ -9,10 +9,10 @@
 
 ## 下载
 
-从 [GameVisionLab 0.1.0 Beta Release](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v0.1.0-beta) 下载：
+从 [GameVisionLab 0.1.1 Beta Release](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v0.1.1-beta) 下载：
 
-- `GameVisionLab-0.1.0-macOS-arm64.zip`
-- `GameVisionLab-0.1.0-macOS-arm64.zip.sha256`
+- `GameVisionLab-0.1.1-macOS-arm64.zip`
+- `GameVisionLab-0.1.1-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
 
@@ -37,9 +37,15 @@
 
 ### 配置中心
 
-![首次安装时的配置中心默认状态](assets/GameVisionLab-Configuration-Center.png)
+#### 配置检查
 
-配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。图片依据当前代码和脱敏默认配置绘制，使用虚拟数据，不是用户电脑的真实截图。
+![配置中心的配置检查页面](assets/GameVisionLab-Configuration-Check.png)
+
+#### 点击配置
+
+![配置中心的分层点击配置页面](assets/GameVisionLab-Configuration-Center.png)
+
+配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。以上为当前版本真实界面截图，仅展示脱敏默认配置，不包含玩家截图、账号信息或本机路径。
 
 ## 内置默认配置
 
