@@ -1,4 +1,4 @@
-# 游戏视觉助手 0.1.1 Beta
+# 游戏视觉助手 1.0.1
 
 这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。
 
@@ -11,8 +11,8 @@
 
 从 [GameVisionLab 0.1.1 Beta Release](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v0.1.1-beta) 下载：
 
-- `GameVisionLab-0.1.1-macOS-arm64.zip`
-- `GameVisionLab-0.1.1-macOS-arm64.zip.sha256`
+- `GameVisionLab-1.0.1-macOS-arm64.zip`
+- `GameVisionLab-1.0.1-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
 
