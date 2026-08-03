@@ -9,7 +9,7 @@
 
 ## 下载
 
-从 [GameVisionLab 0.1.1 Beta Release](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v1.0.1-beta) 下载：
+从 [GameVisionLab 0.1.1 Beta Release](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v1.0.1）下载：
 
 - `GameVisionLab-1.0.1-macOS-arm64.zip`
 - `GameVisionLab-1.0.1-macOS-arm64.zip.sha256`
