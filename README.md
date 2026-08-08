@@ -1,4 +1,4 @@
-# 游戏视觉助手 1.1.0
+# 游戏视觉助手 1.1.1
 
 这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。
 
@@ -9,21 +9,19 @@
 
 ## 下载
 
-从 [GameVisionLab 1.1.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v1.1.0) 下载：
+从 [GameVisionLab 1.1.1](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v1.1.1) 下载：
 
-- `GameVisionLab-1.1.0-macOS-arm64.zip`
-- `GameVisionLab-1.1.0-macOS-arm64.zip.sha256`
+- `GameVisionLab-1.1.1-macOS-arm64.zip`
+- `GameVisionLab-1.1.1-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
 
-## 1.1.0 更新
+## 1.1.1 更新
 
-- 新增后台模式：点击可发送到指定游戏窗口，视觉前台和真实鼠标保持不变。
-- 为 macOS 版 iPad App 补充窗口级激活与失活会话，减少后台点击被忽略的情况。
-- 后台会话失效时自动重建；修复 Event Tap 读取普通输入事件时可能导致崩溃的问题。
-- 目标窗口因 Mission Control 动画暂时不可见时改为短暂等待恢复，不再立即中止。
-- 自动玩法在战斗后可从探索修正为通用战斗，并清理上一玩法遗留的过渡约束。
-- 优化后台虚拟光标样式、位置与窗口层级。
+- 后台激活引导改为非点击事件，避免激活过程额外产生一次合成点击。
+- 加强 `Esc` / 任务取消后的输入安全，取消后不会继续启动新的确认点击。
+- 前台拖拽在取消或中途失败时会优先释放 `mouseUp`，降低鼠标保持按下状态的风险。
+- 保留 1.1.0 的窗口定向后台模式、Mission Control 短暂恢复等待和虚拟光标能力。
 
 ## 核心能力
 
