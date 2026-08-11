@@ -1,10 +1,10 @@
-# 游戏视觉助手 2.0.0
+# 游戏视觉助手 2.1.0
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
 > 使用“后台”点击模式前，请先关闭 macOS 的「台前调度（Stage Manager）」。开启台前调度时，游戏窗口的舞台切换、层级和坐标状态可能发生变化，百鬼夜行等实时模式可能出现点击位置异常。使用后台模式时请保持台前调度关闭。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.0.0 进一步加入百鬼夜行 `Hyakki Vision` 特殊视觉识别与实时投豆流程。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.1.0 在 2.0.0 百鬼夜行 `Hyakki Vision` 基础上，进一步优化实时目标追踪、Focus / AIM 选择、百鬼状态识别延迟和悬浮监视器交互。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -13,22 +13,23 @@
 
 ## 下载
 
-从 [GameVisionLab 2.0.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.0.0) 下载：
+从 [GameVisionLab 2.1.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.0) 下载：
 
-- `GameVisionLab-2.0.0-macOS-arm64.zip`
-- `GameVisionLab-2.0.0-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.1.0-macOS-arm64.zip`
+- `GameVisionLab-2.1.0-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
 
-## 2.0.0 更新
+## 2.1.0 更新
 
-- 新增百鬼夜行正式流程，可将入口、开始、进行中、结算与奖励页面纳入统一流程状态机。
-- 新增 `Hyakki Vision` 特殊界面识别；“百鬼进行中”由 Core ML Detector 确认，不需要固定 OCR 文字。
-- OCR 与 Hyakki Vision 使用互斥识别通道；百鬼运行期间 OCR 仅检查流程允许的退出/结算页面。
-- 新增 Detector → Tracker → Gaussian Focus → AIM → LiveClickService 实时投豆链路。
-- 投豆冷却支持最短/最长范围，每次动作后重新随机下一次冷却时间。
-- 百鬼运行时悬浮监视器自动显示 Track、LOCK/LEARN、Focus、AIM、投豆次数与延迟。
-- 修复配置窗口键盘监听可能干扰普通文本和数字输入的问题。
+- 优化百鬼夜行进入状态的识别延迟：保留真实向左运动确认，但减少一次额外稳定确认，能够更快进入持续投豆状态。
+- 优化百鬼 Focus 评分：综合目标密度、目标高度、目标面积和成熟度，在同屏多个目标时更稳定地选择优先目标。
+- AIM 每帧重新评估候选目标，并使用切换余量抑制频繁抖动；低置信度但尺寸较大的目标不再被 Focus 默认额外惩罚。
+- 改进百鬼运行时悬浮监视器拖动行为，使用明确的 AppKit 窗口拖动逻辑。
+- 后台模式增加醒目的 macOS「台前调度」关闭提醒。
+- 优化运行期窗口捕获：实时识别不再主动将目标 App 切到前台。
+- 优化本地安装与发布脚本：安装后清理临时 App Bundle，减少 Launchpad / Launch Services 发现重复应用的情况。
+- Release 包继续内置百鬼夜行运行所需的 Core ML Detector，安装后无需单独导入模型。
 
 ## 核心能力
 
@@ -62,7 +63,7 @@
 
 ![配置中心的分层点击配置页面](assets/GameVisionLab-Configuration-Center.png)
 
-配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。2.0.0 的界面配置可为无固定文字的动态页面选择 `Hyakki Vision`；点击动作也可选择 Hyakki Vision 持续执行器。
+配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。2.1.0 的界面配置可为无固定文字的动态页面选择 `Hyakki Vision`；点击动作也可选择 Hyakki Vision 持续执行器。
 
 ## 内置默认配置
 
@@ -134,6 +135,7 @@
 
 ## 历史版本
 
+- [GameVisionLab 2.0.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.0.0)
 - [游戏点击助手 3.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v3.0)
 - [配置手册（3.0）](docs/CONFIGURATION.md)
 
