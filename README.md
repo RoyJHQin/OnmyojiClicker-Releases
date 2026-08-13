@@ -1,10 +1,10 @@
-# 游戏视觉助手 2.1.0
+# 游戏视觉助手 2.1.1
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
 > 使用“后台”点击模式前，请先关闭 macOS 的「台前调度（Stage Manager）」。开启台前调度时，游戏窗口的舞台切换、层级和坐标状态可能发生变化，百鬼夜行等实时模式可能出现点击位置异常。使用后台模式时请保持台前调度关闭。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.1.0 在 2.0.0 百鬼夜行 `Hyakki Vision` 基础上，进一步优化实时目标追踪、Focus / AIM 选择、百鬼状态识别延迟和悬浮监视器交互。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.1.1 在 2.1.0 基础上补充截图资料 OCR 结果展示、清理旧界面代码，并同步最新内置默认配置。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -13,12 +13,19 @@
 
 ## 下载
 
-从 [GameVisionLab 2.1.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.0) 下载：
+从 [GameVisionLab 2.1.1](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.1) 下载：
 
-- `GameVisionLab-2.1.0-macOS-arm64.zip`
-- `GameVisionLab-2.1.0-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.1.1-macOS-arm64.zip`
+- `GameVisionLab-2.1.1-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
+
+## 2.1.1 更新
+
+- 截图资料页面新增当前 OCR 结果和置信度展示，便于直接对照配置必须/可选/排除文字。
+- 清理已废弃的旧标注与复核界面代码，保留当前截图资料和配置中心工作流。
+- 重新同步并内置最新界面、点击、流程及特殊识别配置。
+- 延续 2.1.0 的百鬼夜行 Track / Focus / AIM、运动确认和后台模式改进。
 
 ## 2.1.0 更新
 
@@ -63,7 +70,7 @@
 
 ![配置中心的分层点击配置页面](assets/GameVisionLab-Configuration-Center.png)
 
-配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。2.1.0 的界面配置可为无固定文字的动态页面选择 `Hyakki Vision`；点击动作也可选择 Hyakki Vision 持续执行器。
+配置中心用于检查和修改界面文字、相对区域、点击动作及流程规则。2.1.1 的截图资料页面可直接查看 OCR 实际结果并据此调整文字规则；无固定文字的动态页面仍可选择 `Hyakki Vision`。
 
 ## 内置默认配置
 
@@ -135,6 +142,7 @@
 
 ## 历史版本
 
+- [GameVisionLab 2.1.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.0)
 - [GameVisionLab 2.0.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.0.0)
 - [游戏点击助手 3.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v3.0)
 - [配置手册（3.0）](docs/CONFIGURATION.md)
