@@ -1,4 +1,4 @@
-# 游戏视觉助手 2.1.1
+# 游戏视觉助手 2.2.0
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
@@ -13,7 +13,7 @@
 >
 > **原开发与主要测试环境：13.6 英寸 MacBook Air（M5），macOS 默认显示设置（默认分辨率 / 缩放）。** 正式连续运行前，请先使用“只观察”和“单步点击”核查当前设备上的界面识别与文字按钮定位是否准确。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.1.1 在 2.1.0 基础上补充截图资料 OCR 结果展示、清理旧界面代码，并同步最新内置默认配置。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.2.0 新增界面配置「测试与修复」工作区，并更新内置玩法配置。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -22,12 +22,27 @@
 
 ## 下载
 
-从 [GameVisionLab 2.1.1](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.1) 下载：
+从 [GameVisionLab 2.2.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.0) 下载：
 
-- `GameVisionLab-2.1.1-macOS-arm64.zip`
-- `GameVisionLab-2.1.1-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.2.0-macOS-arm64.zip`
+- `GameVisionLab-2.2.0-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
+
+## 2.2.0 更新
+
+### 配置与功能
+
+- 新增「逢魔之时-捡垃圾」「拾光永恒-探索」和「2026超鬼王」的内置配置。默认配置现包含 44 个界面、45 个点击动作、12 套流程和 77 个流程节点。
+- 界面配置新增「测试与修复」工作区，可用当前截图和历史截图对比正式配置与草稿，检查 OCR 文字和识别区域，并撤回本次打开 App 后的上一次应用。
+- 支持点击目标的图像样本匹配，以及流程节点的 OCR 数值条件和 MM:SS 倒计时识别。
+
+### 玩法注意事项
+
+- **逢魔之时－捡垃圾**目前还不稳定，可能因退出不及时而误入战斗。
+- **2026 超鬼王**建议按星级从低到高配置。当前内置配置不会自动强追，如需强追，建议遇到六星时手动操作。
+
+[完整更新日志](CHANGELOG.md)
 
 ## 2.1.1 更新
 
@@ -96,13 +111,14 @@
 - 通用战斗：适用于固定入口、重复战斗和结算后再次进入的玩法；
 - 英杰试炼－秘境：梦墟秘境、兵藏秘境、战斗状态、结算和祝福选择；
 - 武道大会－修行合训：内置对应玩法的界面、点击与流程配置；
-- 百鬼夜行：入口、开始、Hyakki Vision 进行中状态、自动投豆及结算/奖励页面。
+- 百鬼夜行：入口、开始、Hyakki Vision 进行中状态、自动投豆及结算/奖励页面；
+- 逢魔之时－捡垃圾、拾光永恒－探索和 2026 超鬼王。
 
 配置包括 OCR 必须/可选/排除文字、标准化搜索区域、标准化点击区域、识别阈值、页面跳转关系、等待和重试规则，以及特殊视觉识别类型和百鬼实时参数。
 
 这些是可以修改的起始配置，不是不可更改的固定程序。用户可以编辑、复制或删除本地配置；需要恢复时，可在“配置管理”重新导入当前 App 的内置配置，用户新增和复制的配置会保留。
 
-原始截图只用于开发期标注和验证，不是默认运行配置的必需文件。公开包不包含玩家截图、聊天内容、账号信息、窗口历史、日志、本机路径或屏幕绝对坐标。
+原始截图只用于开发期标注和验证，不是默认运行配置的必需文件。公开包中的捡垃圾配置包含用于匹配的游戏图标裁片。公开包不包含原始截图、聊天内容、账号信息、窗口历史、日志、本机路径或屏幕绝对坐标。
 
 ## 第一次使用建议
 
@@ -153,6 +169,7 @@
 
 ## 历史版本
 
+- [GameVisionLab 2.1.1](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.1)
 - [GameVisionLab 2.1.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.1.0)
 - [GameVisionLab 2.0.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v2.0.0)
 - [游戏点击助手 3.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/v3.0)
