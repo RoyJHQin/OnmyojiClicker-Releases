@@ -1,4 +1,4 @@
-# 游戏视觉助手 2.2.0
+# 游戏视觉助手 2.2.1
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
@@ -13,7 +13,7 @@
 >
 > **原开发与主要测试环境：13.6 英寸 MacBook Air（M5），macOS 默认显示设置（默认分辨率 / 缩放）。** 正式连续运行前，请先使用“只观察”和“单步点击”核查当前设备上的界面识别与文字按钮定位是否准确。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.2.0 新增界面配置「测试与修复」工作区，并更新内置玩法配置。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。2.2.1 新增流程循环，内置探索与结界突破的切换方案。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -22,12 +22,20 @@
 
 ## 下载
 
-从 [GameVisionLab 2.2.0](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.0) 下载：
+从 [GameVisionLab 2.2.1](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.1) 下载。
 
-- `GameVisionLab-2.2.0-macOS-arm64.zip`
-- `GameVisionLab-2.2.0-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.2.1-macOS-arm64.zip`
+- `GameVisionLab-2.2.1-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
+
+## 2.2.1 更新
+
+- 新增「探索-突破循环」，可在悬浮窗选择任务、起始阶段和停止条件。
+- 支持突破券局部 OCR 和同行文字的锚点定位。悬浮窗可根据内容自动调整高度。
+- 探索章节选择界面左下角需显示「结界突破」入口。默认方案未包含失败后刷新，可按需自行配置。
+
+[完整更新日志](CHANGELOG.md)
 
 ## 2.2.0 更新
 
@@ -113,6 +121,7 @@
 - 武道大会－修行合训：内置对应玩法的界面、点击与流程配置；
 - 百鬼夜行：入口、开始、Hyakki Vision 进行中状态、自动投豆及结算/奖励页面；
 - 逢魔之时－捡垃圾、拾光永恒－探索和 2026 超鬼王。
+- 探索-突破循环按突破券读数在探索与结界突破之间切换。
 
 配置包括 OCR 必须/可选/排除文字、标准化搜索区域、标准化点击区域、识别阈值、页面跳转关系、等待和重试规则，以及特殊视觉识别类型和百鬼实时参数。
 

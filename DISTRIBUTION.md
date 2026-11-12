@@ -1,10 +1,10 @@
-# GameVisionLab 2.2.0 安装与配置说明
+# GameVisionLab 2.2.1 安装与配置说明
 
 当前测试包使用临时签名，尚未使用 Apple Developer ID 公证。
 
 ## 安装
 
-1. 下载并解压 `GameVisionLab-2.2.0-macOS-arm64.zip`。
+1. 下载并解压 `GameVisionLab-2.2.1-macOS-arm64.zip`。
 2. 将 `GameVisionLab.app` 拖入“应用程序”，覆盖旧版本。
 3. 第一次尝试打开后，如果 macOS 阻止启动，进入“系统设置 → 隐私与安全性”，点击“仍要打开”。
 4. 按提示授予屏幕录制和辅助功能权限，然后完全退出并重新打开 App。
