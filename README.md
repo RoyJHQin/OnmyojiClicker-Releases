@@ -1,4 +1,4 @@
-# 游戏视觉助手 2.2.4
+# 游戏视觉助手 2.2.5
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
@@ -13,7 +13,7 @@
 >
 > **原开发与主要测试环境：13.6 英寸 MacBook Air（M5），macOS 默认显示设置（默认分辨率 / 缩放）。** 正式连续运行前，请先使用“只观察”和“单步点击”核查当前设备上的界面识别与文字按钮定位是否准确。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。支持探索与结界突破的流程循环。2.2.4 支持在接续动作中执行第二次确认点击，内置结界突破失败后的刷新流程。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。支持探索与结界突破的流程循环。2.2.5 新增通用弹窗和循环切换的等待与重试设置。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -22,12 +22,24 @@
 
 ## 下载
 
-从 [GameVisionLab 2.2.4（Build 24）](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.4) 下载。
+从 [GameVisionLab 2.2.5（Build 25）](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.5) 下载。
 
-- `GameVisionLab-2.2.4-macOS-arm64.zip`
-- `GameVisionLab-2.2.4-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.2.5-macOS-arm64.zip`
+- `GameVisionLab-2.2.5-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
+
+## 2.2.5 更新
+
+- 「流程规则 → 通用弹窗」新增「点击后等待」和「最大重试」。同一个弹窗的点击次数会连续累计，到达上限后停止。
+- 「流程循环 → 切换路线」可以设置点击后等待时间和最大重试次数。过渡步骤可以继承路线设置，也可以开启「单独设置等待与重试」。
+- 等待到期后，程序会重新确认原界面并定位点击区。仍在原界面时才重试，确认到达下一界面后继续流程。
+
+本次内置配置同步了悬赏封印和探索-突破循环。悬赏封印点击后等待 1 秒，最多重试 5 次。探索和突破两条切换路线点击后等待 3 秒，最多重试 5 次。「最大重试」从第一次点击之后开始计数。
+
+覆盖 App 后沿用本机配置。重新导入内置配置时，已保存的通用弹窗设置和同一循环方案会继续沿用。
+
+[完整更新日志](CHANGELOG.md)
 
 ## 2.2.4 更新
 
