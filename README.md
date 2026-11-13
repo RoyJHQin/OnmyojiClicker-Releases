@@ -1,4 +1,4 @@
-# 游戏视觉助手 2.2.2
+# 游戏视觉助手 2.2.3
 
 ## ⚠️ 后台模式重要提醒：请关闭 macOS「台前调度」
 
@@ -13,7 +13,7 @@
 >
 > **原开发与主要测试环境：13.6 英寸 MacBook Air（M5），macOS 默认显示设置（默认分辨率 / 缩放）。** 正式连续运行前，请先使用“只观察”和“单步点击”核查当前设备上的界面识别与文字按钮定位是否准确。
 
-这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。支持探索与结界突破的流程循环。2.2.2 新增「确认到达后执行一次」，可将失败后的取消、返回主界面和刷新动作串联起来，并确认九宫格变化后再继续。
+这是原“游戏点击助手”的新一代 `GameVisionLab` 内核：在原有点击流程基础上加入窗口级截图、OCR 文字识别、相对区域定位、界面状态确认和更严格的点击安全检查。支持探索与结界突破的流程循环。2.2.3 升级共用的 OCR 处理，能在选区内兼容文字拆行、少量首尾装饰和偶发错读。
 
 <img src="assets/GameVisionLab-AppIcon.png" alt="游戏视觉助手图标" width="160">
 
@@ -22,12 +22,20 @@
 
 ## 下载
 
-从 [GameVisionLab 2.2.2（Build 22）](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.2) 下载。
+从 [GameVisionLab 2.2.3（Build 23）](https://github.com/RoyJHQin/OnmyojiClicker-Releases/releases/tag/gamevisionlab-v2.2.3) 下载。
 
-- `GameVisionLab-2.2.2-macOS-arm64.zip`
-- `GameVisionLab-2.2.2-macOS-arm64.zip.sha256`
+- `GameVisionLab-2.2.3-macOS-arm64.zip`
+- `GameVisionLab-2.2.3-macOS-arm64.zip.sha256`
 
 当前测试包支持 Apple Silicon Mac，要求 macOS 14.0 或更高版本。
+
+## 2.2.3 更新
+
+- 升级界面识别、流程切换和文字点击共用的 OCR 处理。使用 Apple Vision 的多个候选，遇到疑似错读时裁出选区放大重读。
+- 在同一识别框内兼容上下两行的按钮文案，以及完整词首尾的少量装饰符号。例如「召唤鬼王」只需配置一次完整词，「>自动挑战」也可识别。
+- 近似错字需要局部重读或另一条独立文字佐证。相似页面难以区分时等待下一帧，搜索区内有多个同名按钮时暂停点击。
+- 同步超鬼王默认配置。召唤按钮改用完整词「召唤鬼王」，胜利结算等待两帧再点，避免在记录战斗次数前离开结算页。
+- 38 项自动测试通过，已完成本机截图回放。新版超鬼王完整流程仍待游戏内实测。
 
 ## 2.2.2 更新
 
